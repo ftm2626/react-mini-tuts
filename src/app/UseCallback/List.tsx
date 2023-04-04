@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 
-function List({ getItems }: { getItems: () => number[] }) {
+function List({ getItems }: { getItems: (increment: number) => number[] }) {
   const [items, setItems] = useState<Array<number>>([]);
   useEffect(() => {
-    setItems(getItems);
+    setItems(getItems(1));
     console.log("update items");
   }, [getItems]);
 
