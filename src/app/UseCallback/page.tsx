@@ -2,9 +2,8 @@
 import React, { useCallback, useMemo, useState } from "react";
 import List from "./List";
 
-// 1. using USECALLBACK here alows the theme to change with out calling the "getItems" again.
+// 1. using USECALLBACK here allows the theme to change with out calling the "getItems" again.
 // 2. can be used with functions that are slow to render
-// 3. can be used when we have multiple setStates in  our component
 
 // USECALLBACK VS USEMEMO : useMemo takes a function and it will return the "return" value of that functions, but useCallback will return the function it self
 

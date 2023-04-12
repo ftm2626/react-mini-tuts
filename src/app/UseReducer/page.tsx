@@ -1,12 +1,32 @@
-"use client"
-import React, { useReducer } from 'react'
-import { TabReducer, tabInitialState } from './reducerInfo'
+"use client";
+import React, { useReducer } from "react";
+import { myReducer, myInitialState, ActionsType } from "./reducerInfo";
 
 export default function Index() {
-  const [tabState, tabDispatch] = useReducer(TabReducer, tabInitialState)
+  const [state, dispatch] = useReducer(myReducer, myInitialState);
   return (
     <div>
-        <h1>UseReducer</h1>
+      <h1>UseReducer</h1>
+      <div>
+        <button onClick={() => dispatch({ type: ActionsType.decrease })}>
+          -
+        </button>
+        {state.number}
+        <button onClick={() => dispatch({ type: ActionsType.increase })}>
+          {" "}
+          +{" "}
+        </button>
+      </div>
+      <div>
+        <input
+          type="text"
+          onChange={(e) =>
+            dispatch({ type: ActionsType.textChange, payload: e.target.value })
+          }
+          value={state.text}
+        />
+        this text is rendering from useReducer :{state.text}
+      </div>
     </div>
-  )
+  );
 }
