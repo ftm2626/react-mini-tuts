@@ -8,7 +8,6 @@ import List from "./List";
 
 // USECALLBACK VS USEMEMO : useMemo takes a function and it will return the "return" value of that functions, but useCallback will return the function it self
 
-
 function Index() {
   const [number, setNumber] = useState(0);
   const [dark, setDark] = useState(false);
@@ -29,6 +28,7 @@ function Index() {
   };
   return (
     <div style={themeStyle}>
+      <p>UseCallback</p>
       <input
         type="number"
         name="count"

@@ -18,6 +18,8 @@ function Index() {
   };
   return (
     <div>
+      <h1>UseMemo</h1>
+      <p>type in the input</p>
       <input
         type="number"
         name="count"

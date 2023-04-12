@@ -11,6 +11,7 @@ function Index() {
 
   return (
     <div>
+      <h1>Memo</h1>
       <button onClick={() => setAppindex(appindex + 1)}>reRender app</button>
       <button onClick={() => setColor(color === "red" ? "blue" : "red")}>
         reRender color
