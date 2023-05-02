@@ -36,6 +36,8 @@ export default function Index() {
     // refetchInterval: 1000 * 60 * 10, // it refetches data every 10 mins
     // enabled: true, // if false it does not run the query. eg. data.id != null
     // retry: 3 //It retries 3 times before showing any error
+    // initialData:[{id:0,text:'initial data'}], //initialData will be conciderd a valid data and make our query stale
+    // placeholderData:[{id:0,text:'placeholder data'}], //placeholder data will replace the data in loading until it loads
   });
 
   const { mutate, mutateAsync } = useMutation({
@@ -43,13 +45,13 @@ export default function Index() {
       return { hi: "bye" };
     }, //It is called before mutaionsFn. Used to to something before the mutation or set something in context
     mutationFn: (title: string) => {
-      return wait(1000).then(() =>
+      return wait(1000).then(() => 
         hardCodeData.push({ id: +Math.random(), title: title })
       );
     },
     onSuccess: (_, __, context) => {
       queryClient.invalidateQueries(["posts"]), // if we mutate the data it does NOT atomatically changes the UI, so we have to invalidate the query that gets the data.
-      queryClient.invalidateQueries(["posts"],{ exact:true}), // without exact = true all the querys starting with "posts" in the app will be invalidated but with exact = true , it will only invalidate the query "posts  "
+        queryClient.invalidateQueries(["posts"], { exact: true }), // without exact = true all the querys starting with "posts" in the app will be invalidated but with exact = true , it will only invalidate the query "posts  "
         console.log(context); // it returns { hi: "bye" };
     },
     // onSuccess: (data, variables, context) => {},
@@ -58,7 +60,7 @@ export default function Index() {
   });
 
   // mutateAsync("new post").then() //Async version
-  //   mutate("post", { onError: () => {}, onSuccess: () => {} }); // We can also set functions in mutate function
+  // mutate("post", { onError: () => {}, onSuccess: () => {} }); // We can also set functions in mutate function
 
   if (isLoading) return <h1>is loading...</h1>;
   if (isError) return <pre>{JSON.stringify(error)}</pre>;
@@ -66,9 +68,9 @@ export default function Index() {
 
   return (
     <div>
-      {data?.map((post: any) => {
-        <div key={post.id}>{post.title}</div>;
-      })}
+      {data?.map((post: any) => (
+        <div key={post.id}>{post.title}</div>
+      ))}
 
       <button onClick={() => mutate("new post")}>Add</button>
       {/* <button onClick={() => mutateAsync("new post").then()}>Add</button> mutateAsync returns a promise which we can use for spicific cases */}
