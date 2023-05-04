@@ -1,6 +1,5 @@
 "use client";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { title } from "process";
 import React from "react";
 
 // main actions you can take with react query is UseQuery and UseMutation
