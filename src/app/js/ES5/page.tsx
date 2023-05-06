@@ -10,6 +10,7 @@ export default function Index() {
   const array2 = [23, 45, 65, 43, 78];
   const object1 = { name: "john", age: 24 };
   const object2 = '{"name" : "john" , "age" : "24" }';
+  const object3 = { firstName: "jane", lastName: "doe" };
   array2.forEach((e) => {
     return (string3 = string3 + e);
   });
@@ -23,8 +24,14 @@ export default function Index() {
     set setAge(value: number) {
       this.age = value;
     },
+    reverseName: function () {
+      return this.lastName + " " + this.firstName;
+    },
   };
   objectGS.age = 24;
+
+  //function bind
+  let reverseName = objectGS.reverseName.bind(object3);
 
   return (
     <>
@@ -167,7 +174,6 @@ export default function Index() {
       </p>
       <p>(new Date()).toJSON() :{new Date().toJSON()}</p>
       <hr />
-      
       <hr />
       <p>Property Getters and Setters</p>
       <p>
@@ -185,7 +191,12 @@ export default function Index() {
       <p>object.fullName : {objectGS.fullName}</p>
       <p>object.age : {objectGS.age}</p>
       <hr />
-
+      <p>
+        Function bind() : with the bind method an oject can borrow a method from
+        another object
+      </p>
+      <p>eg. in code</p>
+      <p>{reverseName()}</p>
     </>
   );
 }
