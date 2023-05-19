@@ -1,5 +1,10 @@
-import Providers from "@/utils/Provider";
+"use client";
+import Providers from "@/utils/reactQuery/Provider";
 import "./globals.css";
+import { store } from "@/utils/redux/store";
+import { Provider } from "react-redux";
+// import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
 
 export const metadata = {
   title: "Create Next App",
@@ -11,10 +16,18 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // const queryClient = new QueryClient();
+
   return (
     <html lang="en">
       <body>
-        <Providers>{children}</Providers>
+        <Provider store={store}>
+          {/* <QueryClientProvider client={queryClient}>
+            this is the old way of setting up react-query in next, but for next
+            13 we need a custome provider */}
+          <Providers>{children}</Providers>
+          {/* </QueryClientProvider> */}
+        </Provider>
       </body>
     </html>
   );
