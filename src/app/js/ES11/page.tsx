@@ -4,10 +4,10 @@ import React from "react";
 
 export default function Index() {
   const string1 = "this is my string";
-  const string2 = string1.matchAll("string");
-  const string3 = string1.matchAll(/string/g); // If the parameter is a regular expression, the global flag (g) must be set set, otherwise a TypeError is thrown.
-  const string4 = string1.matchAll(/string/i); // If you want to search case insensitive, the insensitive flag (i) must be set:
-  console.log(Array.from(string2));
+  // const string2 = string1?.matchAll("string");
+  // const string3 = string1?.matchAll(/string/g); // If the parameter is a regular expression, the global flag (g) must be set set, otherwise a TypeError is thrown.
+  // const string4 = string1?.matchAll(/string/i); // If you want to search case insensitive, the insensitive flag (i) must be set:
+  // console.log(Array.from(string2));
 
   return (
     <div>

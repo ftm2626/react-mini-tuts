@@ -1,9 +1,10 @@
 "use client";
+import { RootStateType } from "@/utils/redux/store";
 import React from "react";
 import { useSelector } from "react-redux";
 
 function Navbar() {
-  const { amount } = useSelector((store) => store?.cart);
+  const { amount } = useSelector((store: RootStateType) => store?.cart);
 
   return (
     <nav>

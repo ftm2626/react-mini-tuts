@@ -44,7 +44,7 @@ export default function Index() {
       return { hi: "bye" };
     }, //It is called before mutaionsFn. Used to to something before the mutation or set something in context
     mutationFn: (title: string) => {
-      return wait(1000).then(() => 
+      return wait(1000).then(() =>
         hardCodeData.push({ id: +Math.random(), title: title })
       );
     },

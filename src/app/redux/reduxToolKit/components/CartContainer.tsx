@@ -3,10 +3,13 @@ import { useSelector } from "react-redux";
 import CartItem from "./CartItem";
 import { useDispatch } from "react-redux";
 import { toggleModal } from "@/utils/redux/features/modalSlice";
+import { RootStateType } from "@/utils/redux/store";
 
 function CartContainer() {
   const dispatch = useDispatch();
-  const { cartItems, total, amount } = useSelector((store) => store?.cart);
+  const { cartItems, total, amount } = useSelector(
+    (store: RootStateType) => store?.cart
+  );
 
   if (amount < 1) {
     return (
@@ -25,7 +28,7 @@ function CartContainer() {
         <h2>your bag</h2>
       </header>
       <div>
-        {cartItems.map((item: any) => {
+        {cartItems?.map((item: any) => {
           return <CartItem key={item.id} {...item} />;
         })}
       </div>

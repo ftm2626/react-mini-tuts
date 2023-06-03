@@ -9,3 +9,4 @@ export const store = configureStore({
     modal: ModalReducer,
   },
 });
+export type RootStateType = ReturnType<typeof store.getState>;
