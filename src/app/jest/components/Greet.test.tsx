@@ -11,7 +11,7 @@ describe("Greet group test ", () => {
 
   test("renders with name", () => {
     render(<Greet name="jasi" />);
-    const text = screen.getByText(/Hello jasi/);
+    const text = screen.getByText(/Hello jasi/);  
     expect(text).toBeInTheDocument();
   });
 });

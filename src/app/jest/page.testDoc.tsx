@@ -44,4 +44,14 @@ test("render the page", () => {
 // code that is not important from a user point of view
 
 
+// RTL queries
+// to find single elements : getBy..., queryBy..., findBy...
+// to find multiple elements : getAllBy..., queryAllBy..., findAllBy...
+
+// getByRole 
+// https://www.w3.org/TR/html-aria/#docconformance 
+// html elements and roles
+
+
+
  
