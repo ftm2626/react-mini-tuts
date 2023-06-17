@@ -52,6 +52,17 @@ test("render the page", () => {
 // https://www.w3.org/TR/html-aria/#docconformance 
 // html elements and roles
 
+// getByRole options
+// name:
+// 1.the label of a form element
+// 2.the text content of a button
+// 3.the value of the aria-label attribute
+// level : 1 to 6 for h1 to h6
+// hidden
+// selected
+// checked
+// pressed
 
+// getByLabelText searches for the label that matches the given text, then find the element associated with that label
 
  
