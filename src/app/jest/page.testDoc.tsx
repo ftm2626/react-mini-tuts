@@ -65,4 +65,30 @@ test("render the page", () => {
 
 // getByLabelText searches for the label that matches the given text, then find the element associated with that label
 
- 
+// getByText options
+// exact : boolean
+
+// priority order for queries
+// 1.getByRole
+// 2.getByLabelText
+// 3.getByPlaceholderText
+// 4 getByText
+// 5.getByDisplayValue
+// 6.getByAltText
+// 7.getByTitle
+// 8.getByTextId
+
+ // queryBy and queryAllBy
+ // queryBy : 
+ // return the matching node for a query and returns null if no element matches
+ // usefull for asserting an element that is not present
+ // throws an error if nore than one match is found
+ // queryAllBy : 
+ // returns an array of all matching nodes for a query, and return an empty array if no elements match
+
+ // findBy and findAllBy
+ // returns a promise whitch resolves when an element is found which matches the given query
+ // the promise is rejected if no element is found or if more than one element is found after a default timeour of 1000ms
+ // findAllBy
+ // returns a promise which resolves to an array of elements when any elements are found which match the given query
+ // the promise is rejected if no elements are found after a default timeout of 1000 ms
