@@ -99,6 +99,7 @@ test("render the page", () => {
 // tripleClick()
 // hover()
 // unhover()
+// tab
 
 // pointer Apis
 // pointer({keys:'[MouseLeft]'}) -> simulates a left click
@@ -106,3 +107,18 @@ test("render the page", () => {
 // pointer('[MouseLeft][MouseRight]') -> pass in the string if 'keys' is the only argument
 // pointer('[MouseLeft>]') -> press a button without releasing it
 // pointer('[/MouseLeft]') -> just releasing a priviously pressed button
+
+// utility Apis
+// clear()
+// selectOptions()
+// deselectOptions()
+// upload()
+
+// clipboard Apis
+// copy()
+// cut()
+// paste()
+
+// keyboard Api
+// keyboard('foo') -> translates to f,o,o
+// keyboard('{Shift>}A{/Shift}') -> shift down , A, Shift up
