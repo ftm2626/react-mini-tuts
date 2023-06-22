@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen,logRoles } from "@testing-library/react";
 import { Skills } from "./skills";
 
 describe("Skills", () => {
@@ -30,12 +30,15 @@ describe("Skills", () => {
   });
 
   test("start learning button will eventually display", async () => {
-    render(<Skills skills={skills} />);
+    const view = render(<Skills skills={skills} />);
+    // logRoles(view.container)
+    // screen.debug()
     const buttonElement = await screen.findByRole(
       "button",
       { name: "Start learning" },
       { timeout: 2000 }
     );
+    // screen.debug()
     expect(buttonElement).toBeInTheDocument();
   });
 });

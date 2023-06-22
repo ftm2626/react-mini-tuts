@@ -16,9 +16,9 @@ export const Application = () => {
             id="name"
             placeholder="Fullname"
             value="Vishwas"
-            onChange={() => {
-              console.log("");
-            }}
+            // onChange={() => {
+            //   console.log("");
+            // }}
           />
         </div>
         <div>
