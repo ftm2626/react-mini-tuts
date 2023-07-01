@@ -1,4 +1,4 @@
-import { render, screen, getRoles } from "@testing-library/react";
+import { render, screen, getRoles } from "../test-utils";
 import user from "@testing-library/user-event";
 import { Counter } from "./Counter";
 

@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "../test-utils";
 import Greet from "./Greet";
 
 describe("Greet group test ", () => {
@@ -11,7 +11,7 @@ describe("Greet group test ", () => {
 
   test("renders with name", () => {
     render(<Greet name="jasi" />);
-    const text = screen.getByText(/Hello jasi/);  
+    const text = screen.getByText(/Hello jasi/);
     expect(text).toBeInTheDocument();
   });
 });

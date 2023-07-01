@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "../test-utils";
 import { Application } from "./Application";
 
 describe("application test", () => {
@@ -22,7 +22,9 @@ describe("application test", () => {
     });
     const nameElement3 = screen.getByPlaceholderText("Fullname");
     const nameElement4 = screen.getByDisplayValue("Vishwas");
-    const nameElement5 = screen.getAllByText((content) => content.startsWith('Job'))
+    const nameElement5 = screen.getAllByText((content) =>
+      content.startsWith("Job")
+    );
 
     const closeElement = screen.getByTitle("close");
 

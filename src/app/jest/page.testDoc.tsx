@@ -1,5 +1,6 @@
+import { AppProvider } from "./components/AppProvider";
 import Index from "./page";
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "./test-utils";
 
 test("render the page", () => {
   render(<Index />);
@@ -122,3 +123,13 @@ test("render the page", () => {
 // keyboard Api
 // keyboard('foo') -> translates to f,o,o
 // keyboard('{Shift>}A{/Shift}') -> shift down , A, Shift up
+
+// Providers
+// use it as a wrapper in the render
+// test("render the page", () => {
+//   render(<Index />, {
+//     wrapper: AppProvider,
+//   });
+// });
+
+// OR use test-utils.tsx file

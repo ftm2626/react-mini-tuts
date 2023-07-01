@@ -1,4 +1,4 @@
-import { render, screen,logRoles } from "@testing-library/react";
+import { render, screen, logRoles } from "../test-utils";
 import { Skills } from "./skills";
 
 describe("Skills", () => {
