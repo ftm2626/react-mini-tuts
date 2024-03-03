@@ -1,0 +1,9 @@
+-- Examples
+
+-split screens
+-lists and items
+-modals
+
+- the idea of layout component : our components shouldn't know where they are being desplayed
+
+15:00
