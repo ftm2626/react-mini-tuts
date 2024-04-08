@@ -1,5 +1,5 @@
 import { render, screen } from "../test-utils";
-import { Application } from "./Application";
+import { Application } from "./2.Application";
 
 describe("application test", () => {
   test("text input test", () => {
