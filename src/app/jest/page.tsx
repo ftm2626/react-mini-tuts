@@ -1,8 +1,6 @@
 import React from "react";
-import Greet from "./components/Greet";
-import { Application } from "./components/Application";
 import { Counter } from "./components/Counter";
-import { AppProvider } from "./components/AppProvider";
+import { AppProvider } from "./components/6.AppProvider";
 
 function Index() {
   return (

@@ -1,5 +1,5 @@
 import { render, screen } from "../test-utils";
-import Greet from "./Greet";
+import Greet from "./1.Greet";
 
 describe("Greet group test ", () => {
   test("renders correctly", () => {

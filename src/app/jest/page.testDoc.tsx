@@ -1,4 +1,4 @@
-import { AppProvider } from "./components/AppProvider";
+import { AppProvider } from "./components/6.AppProvider";
 import Index from "./page";
 import { render, screen } from "./test-utils";
 
@@ -133,3 +133,6 @@ test("render the page", () => {
 // });
 
 // OR use test-utils.tsx file
+
+
+// 14
