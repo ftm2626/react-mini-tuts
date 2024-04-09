@@ -1,0 +1,14 @@
+describe(name: name of the group test,fn)
+
+test(name,fn,timeout:default is 5s)
+test.only() => will only run this test in the file
+test.skip() => will skip this test
+
+it() = test()
+fit() = test.only()
+xit() = test.skip()
+
+naming your test file
+page.test.tsx
+page.spec.tsx
+__test__ folder

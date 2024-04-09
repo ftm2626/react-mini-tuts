@@ -1,0 +1,15 @@
+coverage threshold => put in package.json
+"jest" : {"coverageThreshold" : { "global" : { "branches": 80, "functions": 80, "lines": 80, "statements": -10 } } }
+test will fail if there's less than 80% branch, function and line coverage, or more than 10 statments have failed
+you can exculde files from coverage in package.json
+
+what to test - basic
+test component renders
+test component renders with props
+test component renders in diffrent states
+test component renders to events
+
+what not to test
+implementation details
+third party code
+code that is not important from a user point of view
