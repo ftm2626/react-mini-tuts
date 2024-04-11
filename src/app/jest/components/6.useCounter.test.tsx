@@ -1,5 +1,5 @@
 import { renderHook } from "../test-utils";
-import { useCounter } from "./useCounter";
+import { useCounter } from "./6.useCounter";
 
 describe("useCounter", () => {
   test("should render initial count", () => {

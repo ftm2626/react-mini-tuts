@@ -1,6 +1,6 @@
 import { render, screen, getRoles } from "../test-utils";
 import user from "@testing-library/user-event";
-import { Counter } from "./Counter";
+import { Counter } from "./4.Counter";
 
 describe("Counter", () => {
   test("renders correctly", () => {

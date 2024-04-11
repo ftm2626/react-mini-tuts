@@ -1,6 +1,6 @@
 import React from "react";
-import { Counter } from "./components/Counter";
-import { AppProvider } from "./components/6.AppProvider";
+import { Counter } from "./components/4.Counter";
+import { AppProvider } from "./components/5.AppProvider";
 
 function Index() {
   return (
@@ -15,3 +15,4 @@ function Index() {
 }
 
 export default Index;
+//37

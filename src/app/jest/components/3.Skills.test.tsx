@@ -1,5 +1,5 @@
 import { render, screen, logRoles } from "../test-utils";
-import { Skills } from "./skills";
+import { Skills } from "./3.Skills";
 
 describe("Skills", () => {
   const skills = ["html", "css", "js"];

@@ -1,0 +1,9 @@
+Providers
+use it as a wrapper in the render
+test("render the page", () => {
+  render(<Index />, {
+    wrapper: AppProvider,
+  });
+});
+
+OR use test-utils.tsx file
