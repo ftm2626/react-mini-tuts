@@ -1,0 +1,2 @@
+act: when writing ui unit tests, tasks like rendering, user events or data fetching can be considered as "units" of interaction with a user interface. 
+act() makes sure all updates related to these units have been processed and applied to the dom before you make any assertions.

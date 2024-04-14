@@ -9,7 +9,7 @@ function Index() {
       {/* <Greet name="jasiiii" /> */}
       {/* <Application /> */}
       {/* <Skills skills={["html", "css"]} /> */}
-      <Counter />
+      <Counter /> 
     </AppProvider>
   );
 }

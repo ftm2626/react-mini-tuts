@@ -1,0 +1,4 @@
+apis are for end to end test not unit test
+instead we should mock http requests
+
+use package : npm i msw
