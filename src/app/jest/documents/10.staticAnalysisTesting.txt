@@ -1,0 +1,50 @@
+static alalysis testing
+
+process of verifying that your code meets certain expectaions without actually running it
+1.ensure consistent style and formatting
+2.check for common mistakes and possible bugs
+3.limit the complexity of code 
+4.verify type consistency
+
+like
+
+*typescript
+*ESlint
+*Prettier
+*Husky
+*lint-staged
+
+
+*ESlint
+    install extension
+    npm install  eslint-plugin-jest-dom
+    "plugin:jest-dom/recommended" in package.json -> eslintConfig
+    how to run ESlint with npm command:
+    "lint" : "eslint --ignore-path .gitignore ." => in package.json -> scripts
+    when using prettier use this package so it won't conflict:
+    npm install eslint-config-prettier
+    "eslint-config-prettier" in package.json -> eslintConfig
+
+*Husky
+    install Husky
+    npx husky-init && yarn | npm install
+    in husky/pre-commit
+    replace npm test with
+    npm run lint && npm run format
+    it auto formats and auto lint check before commit ->to ALL files
+
+    to check if all the tests word before commit
+    npx husky add .husky/pre-push "npm test -- --watchAll=false"
+    only pass codes will be pushed
+
+*lint-staged
+    runs linters and formatters against stage git files
+    npm install lint-staged
+    in package.json main
+    "lint-staged":{
+        "*.{ts,tsx}":["eslint"],
+        "*.{ts,tsx,css,scss}":["prettier --write"],
+    }
+    in husky/pre-commit
+    replace npm run lint && npm run format with
+    npx lint-staged
