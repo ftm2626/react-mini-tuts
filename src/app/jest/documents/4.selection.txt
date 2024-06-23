@@ -2,7 +2,7 @@ queryBy and queryAllBy
 queryBy :
 return the matching node for a query and returns null if no element matches
 usefull for asserting an element that is not present
-throws an error if nore than one match is found
+throws an error if more than one match is found
 queryAllBy :
 returns an array of all matching nodes for a query, and return an empty array if no elements match
 
