@@ -1,0 +1,6 @@
+Type assertion allows you to set the type of a value and tell the compiler not to infer it. This is when you, as a programmer, might have a better understanding of the type of a variable than what TypeScript can infer on its own. 
+
+let code: any = 123; 
+let employeeCode = <number> code; 
+console.log(typeof(employeeCode)); //Output: number
+
