@@ -1,23 +1,65 @@
 A.primitive types
+
     1.boolean
+
     2.number
+
     3.string
+
     4.void : when functions do not return a value
+
     5.undefined : undefined means a variable has been declared but has not yet been assigned a value. variable has not yet been initialized.
         let title:string; -> this is undefined
+
     6.null : null is assigned to the value. it might be an optional value. It can be assigned to a variable as a representation of no value.
         let title:string = null;
+
 B.object types
+
     1.interface
+
     2.class
+
     3.enums
-    4.array
-    5.tuple
+        .numeric enums:
+            enum Direction {
+                Up,
+                Down,
+                Left,
+                Right,
+                }
+
+        .string enums
+            enum Direction {
+                Up = "UP",
+                Down = "DOWN",
+                Left = "LEFT",
+                Right = "RIGHT",
+                }
+        .both can be used in one enum
+
+    4.array 
+        const myArray: string[] = ["name"]
+
+        .readonly : The readonly keyword can prevent arrays from being changed.
+            const names: readonly string[] = ["Dylan"];
+
+    5.tuple : A tuple is a typed array with a pre-defined length and types for each index.
+        let ourTuple: [number, boolean, string];
+        ourTuple = [5, false, 'Coding God was here'];
+
+        .Named tuples allow us to provide context for our values at each index.
+        const graph: [x: number, y: number] = [55.2, 41.3];
+
 C.other types
+
     1.any : disables any type checking.
+
     2.object
+
     3.unknown :all possible values are excepted and type checking is not disabled
         if(typeof val === "number") val++;
+
     4.never : no possible value. can build your own complex type.
         type A = number & string -> this is evaluated as never. you can't have both.
 
