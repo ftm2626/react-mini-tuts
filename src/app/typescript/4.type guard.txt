@@ -1,0 +1,118 @@
+1.typeof guard
+    type alphanumeric = string | number
+
+    function add(a:alphanumeric,b:alphanumeric ){
+        if(typeof a === "number" && typeof b === "number") {
+            return a + b
+        }
+    }
+
+    add(5,5)
+
+
+2.instanceof guard
+
+    class Banana {
+        isTasty(): boolean {
+            return true
+        }
+    }
+
+    class Apple {
+        isJuicy(): boolean {
+            return true
+        }
+    }
+
+
+    type Fruit = Banana | Apple
+
+    function buyFruit(fruit: Fruit):number {
+        let price = 0;
+
+        if(fruit instanceof Banana){
+            price = fruit.isTasty() ? 5 : 10;
+        }
+
+        return price;
+    }
+
+    const apple = new Apple()
+    buyFruit(apple)
+
+
+3.in guard
+
+    class Banana {
+        isTasty(): boolean {
+            return true
+        }
+    }
+
+    class Apple {
+        isJuicy(): boolean {
+            return true
+        }
+    }
+
+
+    type Fruit = Banana | Apple
+
+    function buyFruit(fruit:Fruit) : number{
+        let price = 0;
+        if('isTasty' in fruit){
+            price = fruit.isTasty() ? 5 : 10
+        }
+
+        if('isJuicy' in fruit){
+            price = fruit.isJuicy() ? 5 : 10
+        }
+
+        return price;
+    }
+
+    const apple = new Apple();
+    buyFruit(apple);
+
+4.equality narrowing
+
+    function getValues(a:number | string, b:string){
+        if(a === b){
+            console.log(a)
+        }
+    }
+
+5.user-defined guards
+    class Banana {
+        isTasty(): boolean {
+            return true
+        }
+    }
+
+    class Apple {
+        isJuicy(): boolean {
+            return true
+        }
+    }
+
+
+    type Fruit = Banana | Apple
+
+    function isBanana(fruit: Fruit) : fruit is Banana{
+        return fruit instanceof Banana
+    }
+
+    function buyFruit(fruit: Fruit):number{
+        let price = 0;
+
+        if(isBanana(fruit)) {
+            price = fruit.isTasty() ? 5 : 10
+        }else{
+            price = fruit.isJuicy() ? 5 : 10
+        }
+
+        return price
+    }
+
+    const apple = new Apple();
+    buyFruit(apple);
