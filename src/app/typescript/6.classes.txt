@@ -1,0 +1,68 @@
+A.basic class    
+    class coder {
+        name: string
+        constructor(name:string){
+            this.name = name
+        }
+    }
+
+
+b.visibility modifiers
+    class coder {
+        constructor(
+            public name:string
+        ){
+            this.name = name
+        }
+    }
+
+c.extend
+    class webDev extends coder {
+        constructor(
+            public computer:string,
+            name : string
+        ){
+            super(name)
+            this.computer = computer
+        }
+
+        public getName() {
+            return `my name is : ${this.name}`
+        }
+    }
+
+    const sara = new webDev("mac","sara")
+
+
+D.interfaces
+    interface Musician {
+        name : string,
+        instrument : string,
+        play(action:string):string
+    }
+
+    class Guitarist impliments Musisician {
+        name: string
+        instrument : string
+        constructor(
+            name : string,
+            instrument : string
+        ){
+            this.name = name
+            this.instrument : instrument
+        }
+
+        play(action : string) {
+            return ""
+        }
+    }
+
+Access Modifiers
+In TypeScript, access modifiers are keywords used to control the visibility and accessibility of class properties and methods. There are three access modifiers in TypeScript:
+
+public: This is the default access modifier. Properties and methods declared as public can be accessed from anywhere, both inside and outside the class.
+private: Properties and methods declared as private can only be accessed within the same class. They are not accessible from outside the class.
+protected: Properties and methods declared as protected can be accessed within the class and its subclasses. They are not accessible from outside the class and its subclasses.
+
+
+

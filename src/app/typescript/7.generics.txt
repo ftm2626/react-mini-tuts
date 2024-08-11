@@ -1,0 +1,31 @@
+A.generics in functions
+    function getFirstElement<T>(array:t[]){
+        return array[0]
+    }
+
+    const firstNum = getFirstElement([1,2,3]) // returns number
+    const firstNum2 = getFirstElement<number>([1,2,3])
+
+B.generics in types 
+    type apiResponse<T> = {
+        data:T
+        isError:boolean
+    }
+
+    const response : apiResponse<string> = {
+        data: "",
+        isError:false
+    }
+
+C.advance generics
+    1.default value
+        type apiResponse<T = string> = {
+            data:T
+            isError:boolean
+        } // if no generics is given the default type is string
+
+    2.extends
+        type apiResponse<T extends object> = {
+            data:T
+            isError:boolean
+        }

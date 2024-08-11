@@ -1,0 +1,12 @@
+A. interface vs type
+    .interface:
+        -can only define objects
+        -can't use union types
+        -uses "extends"
+        -might be faster to compile
+        -can merge togther multiple interfaces using the same name : eg. window object
+    .type:
+        -can define anything
+        -can use union types
+        -uses "&"
+        -might be slower to compile
