@@ -1,0 +1,7 @@
+JavaScript Hoisting refers moveing the declaration of functions, variables, classes, or imports to the top of their scope, prior to execution of the code.
+
+ this only includes function, function*, async function, and async function* declarations.
+
+ in "var" case it returnes "undefined"
+
+ this does not work with "const" and "let"
