@@ -1,0 +1,80 @@
+1.for statement
+function countSelected(selectObject) {
+  let numberSelected = 0;
+  for (let i = 0; i < selectObject.options.length; i++) {
+    if (selectObject.options[i].selected) {
+      numberSelected++;
+    }
+  }
+  return numberSelected;
+}
+
+
+2.do...while statement
+The do...while statement repeats until a specified condition evaluates to false.
+let i = 0;
+do {
+  i += 1;
+  console.log(i);
+} while (i < 5);
+
+
+
+3.while statement
+A while statement executes its statements as long as a specified condition evaluates to true
+let n = 0;
+let x = 0;
+while (n < 3) {
+  n++;
+  x += n;
+}
+
+4.break statement
+Use the break statement to terminate a loop, switch, or in conjunction with a labeled statement
+for (let i = 0; i < a.length; i++) {
+  if (a[i] === theValue) {
+    break;
+  }
+}
+
+
+5.continue statement
+The continue statement can be used to restart a while, do-while, for, or label statement.
+let i = 0;
+let n = 0;
+while (i < 5) {
+  i++;
+  if (i === 3) {
+    continue;
+  }
+  n += i;
+  console.log(n);
+}
+
+
+6.for...in statement
+The for...in statement iterates a specified variable over all the enumerable properties of an object. For each distinct property, JavaScript executes the specified statements
+function dumpProps(obj, objName) {
+  let result = "";
+  for (const i in obj) {
+    result += `${objName}.${i} = ${obj[i]}<br>`;
+  }
+  result += "<hr>";
+  return result;
+}
+
+
+7.for...of statement / for...in statement
+The for...of statement creates a loop Iterating over iterable objects (including Array, Map, Set, arguments object and so on), invoking a custom iteration hook with statements to be executed for the value of each distinct property.
+
+const arr = [3, 5, 7];
+arr.foo = "hello";
+
+for (const i in arr) {
+  console.log(i);
+}
+// "0" "1" "2" "foo"
+
+for (const i of arr) {
+  console.log(i);
+}
