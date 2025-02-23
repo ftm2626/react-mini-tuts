@@ -1,0 +1,74 @@
+1.Conditional operators
+Conditional operator also known as Ternary operator is the only JS operator that takes three operands.
+
+The operator can have one of two values based on a condition.
+
+Syntax:
+
+condition ? val_for_true : val_for_false
+
+
+
+2.Comma operators
+The comma operator (,) evaluates each of its operands (from left to right) and returns the value of the last operand. This lets you create a compound expression in which multiple expressions are evaluated, with the compound expression’s final value being the value of the rightmost of its member expressions. This is commonly used to provide multiple parameters to a for loop.
+
+
+
+3.Unary Operators
+JavaScript Unary Operators are the special operators that consider a single operand and perform all the types of operations on that single operand. These operators include unary plus, unary minus, prefix increments, postfix increments, prefix decrements, and postfix decrements.
+
+
+4.Assignment Operators
+An assignment operator assigns a value to its left operand based on the value of its right operand. The simple assignment operator is equal (=), which assigns the value of its right operand to its left operand. That is, x = f() is an assignment expression that assigns the value of f() to x.
+
+
+
+5.Comparison Operators
+Comparison operators are the operators that compare values and return true or false. The operators include: >, <, >=, <=, ==, ===, != and !==
+
+
+
+6.Arithmetic operators
+The Arithmetic operators perform addition, subtraction, multiplication, division, exponentiation, and remainder operations.
+
+Arithmetic operators in JavaScript are as follows:
+
++ (Addition)
+- (Subtraction)
+* (Multiplication)
+** (Exponentiation)
+/ (Division)
+% (Modulus i.e. Remainder)
+++ (Increment)
+-- (Decrement)
+
+
+7.Bitwise operators
+Bitwise operators treat arguments as 32-bits (zeros & ones) and work on the level of their binary representation. Ex. Decimal number 9 has a binary representation of 1001. Bitwise operators perform their operations on such binary representations, but they return standard JavaScript numerical values.
+
+Bitwise operators in JavaScript are as follows:
+
+& (AND)
+| (OR)
+^ (XOR)
+~ (NOT)
+<< (Left SHIFT)
+>> (Right SHIFT)
+>>> (Zero-Fill Right SHIFT)
+
+
+
+
+8.Logical Operators
+There are four logical operators in JavaScript: || (OR), && (AND), ! (NOT), ?? (Nullish Coalescing).
+
+
+9.BigInt Operators
+Most operators that can be used with the Number data type will also work with BigInt values (e.g. arithmetic, comparison, etc.). However, the unsigned right shift >>> operator is an exception and is not supported. Similarly, some operators may have slight differences in behaviour (for example, division with BigInt will round towards zero).
+
+
+
+10.String Operators
+In addition to the comparison operators, which can be used on string values, the concatenation operator (+) concatenates two string values together, returning another string that is the union of the two operand strings.
+
+The shorthand assignment operator += can also be used to concatenate strings.

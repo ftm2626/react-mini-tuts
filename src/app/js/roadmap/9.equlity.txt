@@ -25,3 +25,17 @@ console.log(Object.is(obj, {}));
 javascript equality algorithm
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness
+
+
+
+isLooselyEqual
+isLooselyEqual checks whether its two operands are equal, returning a Boolean result. It attempts to convert and compare operands that are of different types.
+
+isStrictlyEqual
+isStrictlyEqual checks whether its two operands are equal, returning a Boolean result. It always considers operands of different types to be different.
+
+Same value zero
+SameValueZero equality determines whether two values are functionally identical in all contexts with +0 and -0 are also considered equal.
+
+Same value
+SameValue equality determines whether two values are functionally identical in all contexts.
