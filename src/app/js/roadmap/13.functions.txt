@@ -1,0 +1,94 @@
+1.Function hoisting
+Consider the example below:
+
+
+console.log(square(5)); // 25
+
+function square(n) {
+  return n * n;
+}
+
+This code runs without any error, despite the square() function being called before it's declared. This is because the JavaScript interpreter hoists the entire function declaration to the top of the current scope
+
+
+2.Recursion
+
+A function that calls itself is called a recursive function. In some ways, recursion is analogous to a loop. Both execute the same code multiple times, and both require a condition (to avoid an infinite loop, or rather, infinite recursion in this case).
+
+function loop(x) {
+  // "x >= 10" is the exit condition (equivalent to "!(x < 10)")
+  if (x >= 10) {
+    return;
+  }
+  // do stuff
+  loop(x + 1); // the recursive call
+}
+loop(0);
+
+
+3.Immediately Invoked Function Expressions (IIFE)
+An Immediately Invoked Function Expression (IIFE) is a code pattern that directly calls a function defined as an expression. It looks like this:
+
+(function () {
+  // Do something
+})();
+
+const value = (function () {
+  // Do something
+  return someValue;
+})();
+
+
+4.Function scopes
+
+Functions form a scope for variables—this means variables defined inside a function cannot be accessed from anywhere outside the function
+
+5.Closures
+
+
+We also refer to the function body as a closure. A closure is any piece of source code (most commonly, a function) that refers to some variables, and the closure "remembers" these variables even when the scope in which these variables were declared has exited.
+
+The key ingredients for a useful closure are the following:
+
+A parent scope that defines some variables or functions. It should have a clear lifetime, which means it should finish execution at some point. Any scope that's not the global scope satisfies this requirement; this includes blocks, functions, modules, and more.
+
+An inner scope defined within the parent scope, which refers to some variables or functions defined in the parent scope.
+
+The inner scope manages to survive beyond the lifetime of the parent scope. For example, it is saved to a variable that's defined outside the parent scope, or it's returned from the parent scope (if the parent scope is a function).
+
+Then, when you call the function outside of the parent scope, you can still access the variables or functions that were defined in the parent scope, even though the parent scope has finished execution.
+
+// The outer function defines a variable called "name"
+const pet = function (name) {
+  const getName = function () {
+    // The inner function has access to the "name" variable of the outer function
+    return name;
+  };
+  return getName; // Return the inner function, thereby exposing it to outer scopes
+};
+const myPet = pet("Vivie");
+
+console.log(myPet()); // "Vivie"
+
+
+6.Function parameters
+A.Default parameters
+B.Rest parameters
+
+A.Default
+function multiply(a, b = 1) {
+  return a * b;
+}
+
+console.log(multiply(5)); // 5
+
+B.Rest
+function multiply(multiplier, ...theArgs) {
+  return theArgs.map((x) => multiplier * x);
+}
+
+
+7.Arrow functions
+An arrow function expression (also called a fat arrow to distinguish from a hypothetical -> syntax in future JavaScript) has a shorter syntax compared to function expressions and does not have its own this, arguments, super, or new.target. Arrow functions are always anonymous.
+
+
