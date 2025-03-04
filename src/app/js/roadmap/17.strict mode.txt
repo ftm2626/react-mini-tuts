@@ -1,0 +1,45 @@
+Strict mode makes several changes to normal JavaScript semantics:
+
+Eliminates some JavaScript silent errors by changing them to throw errors.
+Fixes mistakes that make it difficult for JavaScript engines to perform optimizations: strict mode code can sometimes be made to run faster than identical code that's not strict mode.
+Prohibits some syntax likely to be defined in future versions of ECMAScript.
+
+
+Invoking strict mode
+Strict mode applies to entire scripts or to individual functions. It doesn't apply to block statements enclosed in {} braces; attempting to apply it to such contexts does nothing. eval code, Function code, event handler attributes, strings passed to setTimeout(), and related functions are either function bodies or entire scripts, and invoking strict mode in them works as expected.
+
+Strict mode for scripts
+To invoke strict mode for an entire script, put the exact statement "use strict"; (or 'use strict';) before any other statements.
+
+js
+Copy to Clipboard
+// Whole-script strict mode syntax
+"use strict";
+const v = "Hi! I'm a strict mode script!";
+Strict mode for functions
+Likewise, to invoke strict mode for a function, put the exact statement "use strict"; (or 'use strict';) in the function's body before any other statements.
+
+js
+Copy to Clipboard
+function myStrictFunction() {
+  // Function-level strict mode syntax
+  "use strict";
+  function nested() {
+    return "And so am I!";
+  }
+  return `Hi! I'm a strict mode function! ${nested()}`;
+}
+function myNotStrictFunction() {
+  return "I'm not strict.";
+}
+
+
+
+Changes in strict mode
+Strict mode changes both syntax and runtime behavior. Changes generally fall into these categories:
+
+changes converting mistakes into errors (as syntax errors or at runtime)
+changes simplifying how variable references are resolved
+changes simplifying eval and arguments
+changes making it easier to write "secure" JavaScript
+changes anticipating future ECMAScript evolution.

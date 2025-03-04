@@ -1,0 +1,2 @@
+Explicit binding
+Explicit binding is when you use the call or apply methods to explicitly set the value of this in a function. Explicit Binding can be applied using call(), apply(), and bind().
